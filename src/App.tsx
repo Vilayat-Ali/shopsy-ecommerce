@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import Shop from "./pages/Shop";
 import About from "./pages/About";
 import Cart from "./pages/Cart";
+import ProductDetail from "./pages/ProductDetail";
 
 // importing components
 import Navbar from "./components/Navbar";
@@ -21,6 +22,10 @@ function App() {
           <Route path="/shop" element={<Shop />} />
           <Route path="/about" element={<About />} />
           <Route path="/cart" element={<Cart />} />
+          <Route
+            path="/shop/:category/:productID"
+            element={<ProductDetail />}
+          />
         </Routes>
         <Footer />
       </Router>

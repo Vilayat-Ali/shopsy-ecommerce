@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,3 +9,7 @@
 select{
     -webkit-appearance: listbox !important
     }
+
+html, body{
+    font-family: 'Open Sans', sans-serif;
+}
