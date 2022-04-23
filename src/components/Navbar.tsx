@@ -22,8 +22,12 @@ export default function Navbar() {
               type="button"
               className="focus:ring-4 focus:outline-none focus:ring-green-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
               style={{ backgroundColor: "#22a47f", color: "#fff" }}
+              onClick={() =>
+                (window.location.href =
+                  "https://github.com/Vilayat-Ali/shopsy-ecommerce")
+              }
             >
-              Get started
+              Visit Repo
             </button>
             <button
               data-collapse-toggle="mobile-menu-4"
@@ -113,7 +117,25 @@ export default function Navbar() {
                         className="px-2 py-1 text-sm text-white bg-logogreen rounded-full"
                         style={{ color: "#fff" }}
                       >
-                        9
+                        0
+                      </span>
+                    </div>
+                  </a>
+                </Link>
+              </li>
+              <li>
+                <Link to="/favorites">
+                  <a
+                    className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                    onClick={() => openMenu(!isOpen)}
+                  >
+                    <div className="flex flex-row md:justify-center items-center ">
+                      <img src="https://img.icons8.com/cotton/32/000000/hearts--v8.png" />
+                      <span
+                        className="px-2 py-1 text-sm text-white bg-logogreen rounded-full"
+                        style={{ color: "#fff" }}
+                      >
+                        0
                       </span>
                     </div>
                   </a>
