@@ -1,7 +1,7 @@
 # Shopsy eCommerce React Application
 
 <p align="center">
-  <img src="./Readme/logo.png" width="350" title="Shopsy Logo">
+  <img src="./Readme/logo.jpg" width="350" title="Shopsy Logo">
 </p>
 
 ## Introduction
