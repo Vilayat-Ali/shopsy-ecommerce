@@ -29,7 +29,6 @@ Product Detail Page
 - React-Redux
 - Axios
 - Typescript
-- Auth0
 - React-Router-Dom
 
 ## Skills demonstrated

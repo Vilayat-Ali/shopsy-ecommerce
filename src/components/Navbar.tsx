@@ -15,7 +15,7 @@ export default function Navbar() {
             <a className="flex items-center">
               <img
                 src="/app/logo.png"
-                className="mr-3 h-6 sm:h-9"
+                className="mr-3  w-15 h-15 object-contain"
                 alt="Shopsy logo"
               />
             </a>
@@ -127,7 +127,7 @@ export default function Navbar() {
                 </Link>
               </li>
               <li>
-                <Link to="/favorites">
+                <Link to="/favourite">
                   <a
                     className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                     onClick={() => openMenu(!isOpen)}

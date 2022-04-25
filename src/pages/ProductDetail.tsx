@@ -93,7 +93,7 @@ export default function ProductDetail() {
                     <div className="h-64 md:h-80 rounded-lg bg-gray-100 mb-4 flex items-center justify-center">
                       <img
                         src={product.thumbnail}
-                        className="w-100 h-80 object-cover"
+                        className="h-64 md:h-80 object-contain"
                       />
                     </div>
                   </div>

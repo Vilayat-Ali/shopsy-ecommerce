@@ -11,6 +11,7 @@ import ProductDetail from "./pages/ProductDetail";
 // importing components
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Favourite from "./pages/Favourite";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
             path="/shop/:category/:productID"
             element={<ProductDetail />}
           />
+          <Route path="/favourite" element={<Favourite />} />
         </Routes>
         <Footer />
       </Router>
