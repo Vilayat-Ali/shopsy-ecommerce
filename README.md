@@ -10,6 +10,12 @@ Shopsy is a eCommerce application made using React and Redux. The aim of the pro
 
 ## Screenshots
 
+home page
+
+<p align="center">
+  <img src="./Readme/screenshot/screenshot-home.png" width="full" title="Shopsy Logo">
+</p>
+
 Shop page
 
 <p align="center">
@@ -20,6 +26,12 @@ Product Detail Page
 
 <p align="center">
   <img src="./Readme/screenshot/screenshot-product-detail-page.png" width="full" title="Shopsy Logo">
+</p>
+
+About Page
+
+<p align="center">
+  <img src="./Readme/screenshot/screenshot-about.png" width="full" title="Shopsy Logo">
 </p>
 
 ## Technologies
