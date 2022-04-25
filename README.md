@@ -28,6 +28,12 @@ Product Detail Page
   <img src="./Readme/screenshot/screenshot-product-detail-page.png" width="full" title="Shopsy Logo">
 </p>
 
+Product Cart Page
+
+<p align="center">
+  <img src="./Readme/screenshot/screenshot-cart.png" width="full" title="Shopsy Logo">
+</p>
+
 About Page
 
 <p align="center">
