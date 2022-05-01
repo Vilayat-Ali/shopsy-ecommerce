@@ -15,7 +15,7 @@ export default function Navbar() {
             <a className="flex items-center">
               <img
                 src="/app/logo.png"
-                className="mr-3  w-15 h-15 object-contain"
+                className="mr-3 w-20 md:w-40"
                 alt="Shopsy logo"
               />
             </a>

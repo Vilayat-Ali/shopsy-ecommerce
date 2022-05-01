@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import Shop from "./pages/Shop";
 import About from "./pages/About";
 import Cart from "./pages/Cart";
+import Error from "./pages/Error";
 import ProductDetail from "./pages/ProductDetail";
 
 // importing components
@@ -19,6 +20,7 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
+          <Route path="*" element={<Error />} />
           <Route index element={<Home />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/about" element={<About />} />

@@ -7,6 +7,7 @@ export default function ProductDetail() {
   const [product, setProduct] = useState<any>({});
   const [images, setImages] = useState<[string]>([""]);
   const [loading, setLoading] = useState<Boolean>(false);
+  const [quantity, setQuantity] = useState<number>(1);
   useEffect(() => {
     axios
       .get(`${process.env.REACT_APP_API_BASE_URL}/products/${productID}`)
@@ -62,9 +63,7 @@ export default function ProductDetail() {
                   />
                 </svg>
               </span>
-              <a href="#" className="hover:underline hover:text-gray-600">
-                {category}
-              </a>
+              <a className="hover:underline hover:text-gray-600">{category}</a>
               <span>
                 <svg
                   className="h-5 w-5 leading-none text-gray-300"
@@ -81,7 +80,7 @@ export default function ProductDetail() {
                   />
                 </svg>
               </span>
-              <span>{productID}</span>
+              <span>productID-PID0{productID}</span>
             </div>
           </div>
 
@@ -149,12 +148,20 @@ export default function ProductDetail() {
                     <div className="text-center left-0 pt-2 right-0 absolute block text-xs uppercase text-gray-400 tracking-wide font-semibold">
                       Qty
                     </div>
-                    <select className="cursor-pointer appearance-none rounded-xl border border-gray-200 pl-4 pr-8 h-14 flex items-end pb-1">
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                      <option>5</option>
+                    <select
+                      onChange={(e: any) => setQuantity(e.target.value)}
+                      className="cursor-pointer appearance-none rounded-xl border border-gray-200 pl-4 pr-8 h-14 flex items-end pb-1"
+                    >
+                      <option value={1}>1</option>
+                      <option value={2}>2</option>
+                      <option value={3}>3</option>
+                      <option value={4}>4</option>
+                      <option value={5}>5</option>
+                      <option value={6}>6</option>
+                      <option value={7}>7</option>
+                      <option value={8}>8</option>
+                      <option value={9}>9</option>
+                      <option value={10}>10</option>
                     </select>
                   </div>
 

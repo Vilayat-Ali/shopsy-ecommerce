@@ -141,7 +141,9 @@ export default function Shop() {
             <div className="h-5 w-5 bg-logogreen rounded-full mr-1 animate-bounce200"></div>
             <div className="h-5 w-5 bg-logogreen rounded-full animate-bounce400"></div>
           </div>
-          <h1 className="text-2xl">Loading...</h1>
+          <h1 className="text-2xl text-gray-600">
+            Please wait... Fetching products...
+          </h1>
         </div>
       </div>
     </>

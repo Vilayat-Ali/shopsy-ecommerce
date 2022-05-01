@@ -5,6 +5,7 @@ export interface cartProductCardType {
   productID: string;
   quantity: number;
   productPrice: number;
+  productImage: string;
 }
 
 export default function CartProductCard({
@@ -12,6 +13,7 @@ export default function CartProductCard({
   productID,
   quantity,
   productPrice,
+  productImage,
 }: cartProductCardType) {
   const [stateQuantity, setStateQuantity] = useState<number>(quantity);
   return (
@@ -24,11 +26,7 @@ export default function CartProductCard({
     >
       <div className="flex items-center">
         {" "}
-        <img
-          src="https://i.imgur.com/EEguU02.jpg"
-          width="60"
-          className="rounded-full "
-        />
+        <img src={productImage} width="60" className="rounded-full " />
         <div className="flex flex-col ml-3">
           {" "}
           <span className="md:text-md font-medium">{productName}</span>{" "}
@@ -66,7 +64,7 @@ export default function CartProductCard({
             ${(productPrice * quantity).toFixed(2)}
           </span>{" "}
         </div>
-        <div>
+        <div className="close-btn" onClick={() => setStateQuantity(0)}>
           {" "}
           <i className="fa fa-close text-xs font-medium"></i>{" "}
         </div>

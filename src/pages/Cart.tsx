@@ -29,6 +29,7 @@ export default function Cart() {
                             <CartProductCard
                               key={"a"}
                               productName="Product 1"
+                              productImage="/img/apple.png"
                               productID="220"
                               quantity={2}
                               productPrice={1150}
@@ -113,7 +114,7 @@ export default function Cart() {
                         <input
                           type="text"
                           className="focus:outline-none w-full h-6 bg-gray-800 text-white placeholder-gray-300 text-sm border-b border-gray-600 py-4 px-2"
-                          placeholder="Giga Tamarashvili"
+                          placeholder="Mr. Customer"
                         />{" "}
                       </div>
                       <div className="flex justify-center flex-col pt-3">

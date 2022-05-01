@@ -8,6 +8,25 @@ export default function Home() {
   useEffect(() => {
     setLoading(true);
   }, []);
+  const demo_data: any = [
+    {
+      title: "Top 5 smartphones to buy in 2022",
+      description:
+        "Here's the list of top 5 smartphones that worth your money in 2022",
+      image: "/img/apple.png",
+    },
+    {
+      title: " Enjoy 5% off on Oppo smartphones",
+      description: "Own great camera phones with masterpiece thin body",
+      image: "/img/oppo.png",
+    },
+    {
+      title: "iPhone 12 Max avails 12% off",
+      description:
+        "Apple iPhone 23 Max is the most popular flagship in the current generation of high-performant smartphones",
+      image: "/img/apple.png",
+    },
+  ];
   return (
     <>
       <Helmet>
@@ -61,7 +80,7 @@ export default function Home() {
                   <span className="text-5xl text-logogreen">Shopping</span>
                 </h1>
                 <br />
-                <h1 className="text-md text-gray-600 text-justify">
+                <h1 className="md:text-md text-gray-600 text-justify">
                   <span className="text-logogreen">Shopsy</span> is a one-stop
                   online platform for all of your shopping hauls! Browse over
                   more than 5000+ products from 1200+ popular and trending
@@ -90,24 +109,47 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="feature-ribbon bg-logogreen text-white py-8">
-          <div className="flex md:flex-row sm:flex-col justify-center items-center">
-            <div className="flex flex-col justify-center items-center md:mx-10">
-              <h1 className="text-4xl mb-4">200+</h1>
-              <p className="text-md">Stores & Outlets</p>
-            </div>
-            <div className="flex flex-col justify-center items-center md:mx-10">
-              <h1 className="text-4xl mb-4">2.1M +</h1>
-              <p className="text-md">Daily Shoppers</p>
-            </div>
-            <div className="flex flex-col justify-center items-center md:mx-10">
-              <h1 className="text-4xl mb-4">24x7</h1>
-              <p className="text-md">Customer Support</p>
-            </div>
-            <div className="flex flex-col justify-center items-center md:mx-10">
-              <h1 className="text-4xl mb-4">7 Days</h1>
-              <p className="text-md">Money Back Guarante</p>
-            </div>
+        <section className="feature-ribbon bg-gray-200 text-white py-8">
+          <h1 className="text-center text-gray-800 font-bold text-4xl my-2 mb-2">
+            Latest Sales
+          </h1>
+          <div className="flex flex-col md:flex-row justify-center">
+            {demo_data.map((news: any) => {
+              return (
+                <div className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 mx-auto my-2">
+                  <a>
+                    <img className="rounded-t-lg" src={news.image} alt="" />
+                  </a>
+                  <div className="p-5">
+                    <a>
+                      <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                        {news.title}
+                      </h5>
+                    </a>
+                    <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                      {news.description}
+                    </p>
+                    <Link to="/shop">
+                      <a className="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                        Shop now
+                        <svg
+                          className="ml-2 -mr-1 w-4 h-4"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                            clip-rule="evenodd"
+                          ></path>
+                        </svg>
+                      </a>
+                    </Link>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </section>
         <section className="body">
