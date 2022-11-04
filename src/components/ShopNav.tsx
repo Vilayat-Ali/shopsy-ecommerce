@@ -1,5 +1,3 @@
-import React, { useReducer } from "react";
-
 export default function ShopNav(props: any) {
   return (
     <nav className="w-full bg-logogreen">

@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 export default function Navbar() {
   const [isOpen, openMenu] = useState<Boolean>(false);
   const [section, setSection] = useState<string>("home");
+  const cartQuantity: number = useSelector(
+    (state: any) => state.user.cart.length
+  );
   return (
     <>
       <nav
@@ -120,7 +124,7 @@ export default function Navbar() {
                         className="px-2 py-1 text-sm text-white bg-logogreen rounded-full"
                         style={{ color: "#fff" }}
                       >
-                        0
+                        {cartQuantity}
                       </span>
                     </div>
                   </a>

@@ -1,11 +1,13 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 // components
 import CartProductCard from "../components/CartProductCard";
 
 export default function Cart() {
   const [loading, setLoading] = useState<Boolean>(false);
+  const cartItems: any[] = useSelector((state: any) => state.user.cart);
   useEffect(() => {
     setLoading(!loading);
   }, []);
@@ -24,14 +26,14 @@ export default function Cart() {
                         className="overflow-y-auto"
                         style={{ height: "45vh", marginTop: "2vh" }}
                       >
-                        {[...Array(7)].map((product: any, index: number) => {
+                        {cartItems.map((product: any, index: number) => {
                           return (
                             <CartProductCard
-                              key={"a"}
-                              productName="Product 1"
-                              productImage="/img/apple.png"
+                              key={index}
+                              productName={product.title}
+                              productImage={product.image}
                               productID="220"
-                              quantity={2}
+                              quantity={1}
                               productPrice={1150}
                             />
                           );

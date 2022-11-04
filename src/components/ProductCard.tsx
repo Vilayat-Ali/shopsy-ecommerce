@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import { addToCart } from "../redux/slice/user.slice";
 
 export interface productCardPropType {
   id: number;
@@ -18,6 +20,7 @@ export default function ProductCard({
   discountPercentage,
 }: productCardPropType) {
   const [isFav, setFav] = useState<Boolean>(false);
+  const dispatch = useDispatch();
   return (
     <div className="w-full md:w-400 p-2 my-2">
       <div className="bg-white shadow-lg hover:shadow-xl rounded-lg ">
@@ -74,7 +77,20 @@ export default function ProductCard({
             </Link>
           </div>
           <div className="w-1/2">
-            <button className="block w-full bg-white hover:bg-gray-100 text-logogreen border-2 border-logogreen px-3 py-2 rounded uppercase font-poppins font-medium">
+            <button
+              className="block w-full bg-white hover:bg-gray-100 text-logogreen border-2 border-logogreen px-3 py-2 rounded uppercase font-poppins font-medium"
+              onClick={() => {
+                dispatch(
+                  addToCart({
+                    id,
+                    image,
+                    title,
+                    price,
+                    discountPercentage,
+                  })
+                );
+              }}
+            >
               Add to cart
             </button>
           </div>
