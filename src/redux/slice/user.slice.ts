@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   cart: [],
-  favourites: [],
+  fav: [],
 };
 
 const userSlice = createSlice({
@@ -19,8 +19,19 @@ const userSlice = createSlice({
         (item: any) => item.id !== action.payload.id
       );
     },
+    // add to favourites
+    addToFav: (state: any, action: any) => {
+      state.fav.push(action.payload);
+    },
+    // remove from fav
+    removeFromFav: (state: any, payload: any) => {
+      state.fav = state.fav.filter(
+        (item: any) => item.id !== payload.action.id
+      );
+    },
   },
 });
 
-export const { addToCart, removeFromCart } = userSlice.actions;
+export const { addToCart, removeFromCart, addToFav, removeFromFav } =
+  userSlice.actions;
 export default userSlice.reducer;
